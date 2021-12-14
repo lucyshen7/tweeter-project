@@ -16,14 +16,22 @@ html {
 
 body {
   color: #545149;
-  background-color: #f4f1ec;
   font-size: 24px;
+  font-family: Source Sans Pro, sans-serif;
+  background-color: #eeca69;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  position: relative;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- body {
-   font-family: Source Sans Pro, sans-serif;
- }
+main {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  padding-left: 5%;
+  padding-right: 5%;
+}
