@@ -1,18 +1,20 @@
 #tweet-text {
   background-color: transparent;
   width: 100%;
-  height: 30px;
+  height: auto;
 }
 
 textarea {
   border: none;
   outline: none;
+  height: auto;
 }
 
 button {
   background-color: #4056A1;
   color: #FFFFFF;
   font-family: Bungee;
+  box-shadow: 4px 4px lightgray;
 }
 
 .new-tweet {
@@ -34,4 +36,9 @@ button {
   justify-content: space-between;
   border-top: 4px solid #4056A1;
   padding-top: 0.5em;
+}
+
+.redCounter {
+  color: red;
+  font-family: Bungee;
 }
