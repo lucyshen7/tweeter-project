@@ -5,7 +5,6 @@
  */
 
 $(document).ready(function() {
-
   // Fake data taken from initial-tweets.json
   const data = [
     {
@@ -62,9 +61,11 @@ $(document).ready(function() {
           </div>
         </div>
       </header>
+
       <div class="tweet-body">
         <p>${tweet.content.text}</p>
       </div>
+      
       <footer>
         <p>${time}</p>
         <div class="tweet-icons">
