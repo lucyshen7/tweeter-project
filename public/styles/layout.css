@@ -19,6 +19,7 @@ body {
   font-size: 24px;
   font-family: Source Sans Pro, sans-serif;
   position: relative;
+  margin-top: 120px;
 }
 
 /*
@@ -39,4 +40,5 @@ body {
   padding-right: 5%;
   text-shadow: 4px 4px lightgray;
   background-color: beige;
+  padding-bottom: 3em;
 }
