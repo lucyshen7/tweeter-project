@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  const $tweetText = $('#tweet-text')
+  const $tweetText = $('#tweet-text');
 
   $tweetText.on('input', function() {
     const newText = $tweetText.val();
@@ -16,11 +16,9 @@ $(document).ready(function() {
     $counter.val(remainingChar); // set value of counter to remaining char count
 
     if ($counter.val() < 0) {
-      console.log('if! counter is less than 0!')
       $counter.addClass("redCounter");
     } else {
-      console.log('else!')
       $counter.removeClass("redCounter");
     }
-  })
+  });
 });
