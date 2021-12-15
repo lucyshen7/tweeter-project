@@ -43,9 +43,7 @@ $(document).ready(function() {
   }  
 
   const createTweetElement = (tweet) => {
-
-    let time = timeago.format(tweet.created_at)
-
+    const time = timeago.format(tweet.created_at);
     let $tweet = `
     <article class="article">
       <header class="tweet-header">
@@ -65,7 +63,7 @@ $(document).ready(function() {
       <div class="tweet-body">
         <p>${tweet.content.text}</p>
       </div>
-      
+
       <footer>
         <p>${time}</p>
         <div class="tweet-icons">
@@ -78,5 +76,23 @@ $(document).ready(function() {
   }
 
   renderTweets(data);
+
+  // form submission with jQuery
+  
+  $('form').submit(function(event) { // event listener for submit event on the form element
+    event.preventDefault();
+    const newTweet = $(this).serialize(); 
+    
+    $.ajax({
+      url: "http://localhost:8080/tweets/",
+      method: 'POST',
+      data: newTweet,
+      success: function (data) {
+        console.log('success');
+        console.log(this.data)
+      }
+    })
+    
+  });
 
 })
