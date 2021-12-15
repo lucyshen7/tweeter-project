@@ -1,23 +1,19 @@
 $(document).ready(function() {
 
-  const $tweettext = $('#tweet-text')
+  const $tweetText = $('#tweet-text')
 
-  $tweettext.on('input', function() {
-    const newText = $tweettext.val();
+  $tweetText.on('input', function() {
+    const newText = $tweetText.val();
 
-    const $textarea = $(this).text(newText);
-    $tweettext.append($textarea);
+    const $newText = $(this).text(newText);
+    $tweetText.append($newText);
 
-    const textLength = $(this).val().length; // wrap "this" in jQuery
+    const textLength = $(this).val().length; // wrap "this" in jQuery to find char length
     const remainingChar = 140 - textLength;
 
-    const counterChild = this.parentElement.counter
-    const $counter = $(counterChild);
-
-   $counter.val(remainingChar); // set value of counter to remaining char count
-
-   console.log('counter is', $counter)
-   console.log('counterChild is', counterChild)
+    const $counter = $(this.parentElement.counter);
+    
+    $counter.val(remainingChar); // set value of counter to remaining char count
 
     if ($counter.val() < 0) {
       console.log('if! counter is less than 0!')

@@ -2,12 +2,17 @@
   background-color: transparent;
   width: 100%;
   height: auto;
+  font-weight: bold;
 }
 
 textarea {
   border: none;
   outline: none;
   height: auto;
+}
+
+h3 {
+  margin-bottom: 8px;
 }
 
 button {
