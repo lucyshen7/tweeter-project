@@ -9,3 +9,35 @@ header {
   background-color: #eeca69;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
 }
+
+header.tweet-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 100%;
+  color: darkslategray;
+  background-image: none;
+  background-color: beige;
+}
+
+div.tweet-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+  width: 97%;
+  color: darkslategray;
+  border-bottom: 4px solid #404040;
+  background-image: none;
+  background-color: beige;
+}
+
+div.tweet-body {
+  padding-left: 1em;
+  padding-bottom: 0.5em;
+  font-size: 26px;
+  font-weight: 600;
+  color: #5f5f5f;
+}

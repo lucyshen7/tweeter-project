@@ -13,6 +13,7 @@ textarea {
 
 h3 {
   margin-bottom: 8px;
+  color: #404040;
 }
 
 button {
@@ -27,7 +28,8 @@ button {
   flex-direction: column;
   justify-content: stretch;
   align-self: stretch;
-  width: 90%;
+  width: 100%;
+  margin-bottom: 60px;
 }
 
 .counter {
@@ -39,7 +41,7 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-top: 4px solid #4056A1;
+  border-top: 4px solid #404040;
   padding-top: 0.5em;
 }
 
