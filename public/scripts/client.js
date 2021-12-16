@@ -11,6 +11,7 @@ $(document).ready(function() {
 
   $('.new').on('click', function() {
     $('form').slideToggle();
+    $('#tweet-text').focus();
   }) 
 
   const renderTweets = function(tweets) {
