@@ -49,6 +49,8 @@
 
     <main class="container">
       <section class="new-tweet">
+        <div class="error hide" id="too-long"><i class="fas fa-exclamation-triangle"></i>Too long. Plz respect our limit of 140 chars.<i class="fas fa-exclamation-triangle"></i></div>
+        <div class="error hide" id="empty-tweet"><i class="fas fa-exclamation-triangle"></i>Cannot post empty tweet.<i class="fas fa-exclamation-triangle"></i></div>
         <form action="/tweets/" method="POST">
           <label for="tweet-text"></label>
           <h3>What are you humming about?</h3>

@@ -4,7 +4,14 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+
 $(document).ready(function() {
+  
+  $('.error').hide(); // hide error msg
+
+  $('.new').on('click', function() {
+    $('form').slideToggle();
+  }) 
 
   const renderTweets = function(tweets) {
     $('#tweets-container').empty(); // empty container
@@ -23,12 +30,14 @@ $(document).ready(function() {
 
   const createTweetElement = (tweet) => {
     const time = timeago.format(tweet.created_at);
+
     // prevent XSS with escaping
     const escape = function (str) { 
       let div = document.createElement("div");
       div.appendChild(document.createTextNode(str));
       return div.innerHTML;
     };
+
     let $tweet = `
     <article class="article">
       <header class="tweet-header">
@@ -55,8 +64,7 @@ $(document).ready(function() {
           <i class="fas fa-flag"></i><i class="fas fa-retweet"></i><i class="fas fa-heart"></i>
         </div>
       </footer>
-    </article>
-    `
+    </article>`
     return $tweet;
   }
 
@@ -65,14 +73,20 @@ $(document).ready(function() {
   $('form').submit(function(event) { // event listener for submit event on the form element
     event.preventDefault();
 
-    const input = $(this).children('#tweet-text').val();
-    const tweetCount = $(this.counter).val();
+    const input = $(this).children('#tweet-text').val(); // count new tweet chars
+    const tweetCount = $(this.counter).val(); // count remaining chars
 
     if (input === "") {
-      alert("Tweet cannot be empty.");
+      $('#too-long').hide();
+      $('#empty-tweet').removeClass('hide').slideDown();
+
     } else if (tweetCount < 0) {
-      alert("Exceeded maximum characters.");
+      $('#empty-tweet').hide();
+      $('#too-long').removeClass('hide').slideDown();
+
     } else {
+      $('.error').slideUp();
+
       const newTweet = $(this).serialize(); 
       $.ajax({
         url: "/tweets/",
@@ -83,8 +97,10 @@ $(document).ready(function() {
           loadTweets();
         }
       })
-    }
 
+      $(this.counter).val(140); // reset char counter value
+
+    }
   });
 
   // Fetch tweets with Ajax
