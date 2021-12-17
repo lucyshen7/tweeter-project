@@ -4,10 +4,10 @@
 
 Tweeter is a simple, single-page **Twitter clone** built with HTML, CSS, JS, jQuery and AJAX (front-end) + Node and Express (back-end).
 
-*Tweeter supports:
+*Tweeter supports:*
 - Mobile and tablet display
 - Desktop display
-- Form and page toggle features*
+- Form and page toggle features
 
 ## Final Product
 !["Screenshot of desktop display with tweets"](https://github.com/lucyshen7/tweeter-project/blob/master/docs/desktop-tweets.png)
