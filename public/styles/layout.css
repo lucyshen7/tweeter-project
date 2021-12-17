@@ -1,7 +1,7 @@
 /*
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
+ * Not modified
  */
 html {
   box-sizing: border-box;
@@ -15,15 +15,14 @@ html {
  */
 
 body {
+  background-color: beige;
   color: #545149;
   font-size: 24px;
   font-family: Source Sans Pro, sans-serif;
-  position: relative;
-  margin-top: 120px;
 }
 
 /*
- * Additional CSS can be defined below or in other CSS files, as per instructions
+ * Additional CSS
  */
 
 .not-bold {
@@ -40,19 +39,30 @@ body {
   padding-right: 5%;
   text-shadow: 4px 4px lightgray;
   background-color: beige;
-  padding-top: 1em;
-  padding-bottom: 3.5em;
+  padding-top: 7em;
+  padding-bottom: 4em;
 }
 
-/* Mobile Styles */
+/*
+* Mobile Styles
+*/
+
 @media only screen and (max-width: 1024px) {
-  nav {
-    background-color: #eeca69;
-    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  
+  .user-profile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container {
+    padding-top: 3em;
   }
 }
 
-/* Tablet & Desktop Styles */
+/*
+* Tablet & Desktop Styles
+*/
+
 @media only screen and (min-width: 1024px) {
 
   nav {
@@ -65,22 +75,23 @@ body {
     position: fixed;
     width: 40%;
     display: flex;
-    align-content: center;
     flex-direction: column;
+    justify-content: center;
+    align-content: center;
     background-image: none;
     background-color: beige;
+    margin-top: 8em;
   }
 
   .user-profile {
     flex-direction: column;
     justify-content: space-around;
     margin: auto;
-    width: 80%;
+    width: 75%;
     height: 45%;
     padding-top: 5%;
     background-color: #eeca69;
     background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
-    margin-top: 150px;
   }
 
   .container {
