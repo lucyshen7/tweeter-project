@@ -11,15 +11,6 @@ $(document).ready(function() {
     $('#tweet-text').focus();
   }); 
 
-  $(document).scroll(function() { // second toggle stretch
-    $('#toggle-up').show();
-  });
-
-  $('#toggle-up').on('click', function() { 
-    window.scrollTo(0,0);
-    $('#tweet-text').focus();
-  }); 
-
   const renderTweets = function(tweets) { // render all tweets
 
     $('#tweets-container').empty(); // empty container

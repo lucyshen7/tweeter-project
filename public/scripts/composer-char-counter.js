@@ -21,4 +21,14 @@ $(document).ready(function() {
       $counter.removeClass("redCounter");
     }
   });
+
+  $(document).scroll(function() { // second toggle stretch
+    $('#toggle-up').show();
+  });
+
+  $('#toggle-up').on('click', function() { 
+    window.scrollTo(0,0);
+    $('#tweet-text').focus();
+  }); 
+
 });
