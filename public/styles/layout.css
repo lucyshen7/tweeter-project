@@ -40,5 +40,41 @@ body {
   padding-right: 5%;
   text-shadow: 4px 4px lightgray;
   background-color: beige;
-  padding-bottom: 3em;
+  padding-top: 1em;
+  padding-bottom: 3.5em;
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 768px) {
+
+  header.profile {
+    height: 100%;
+    float: left;
+    position: fixed;
+    width: 40%;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    background-image: none;
+    background-color: beige;
+  }
+
+  .user-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    height: 50%;
+    padding-top: 5%;
+    background-color: #eeca69;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+    margin-top: -200px;
+  }
+
+  .container {
+    width: 60%;
+    float: right;
+  }
+
 }

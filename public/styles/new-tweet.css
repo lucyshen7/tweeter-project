@@ -47,6 +47,7 @@ button {
   align-self: stretch;
   width: 100%;
   margin-bottom: 60px;
+  padding-top: 2em;
 }
 
 .counter {
