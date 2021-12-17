@@ -44,8 +44,20 @@ body {
   padding-bottom: 3.5em;
 }
 
-/* Tablet Styles */
-@media only screen and (min-width: 768px) {
+/* Mobile Styles */
+@media only screen and (max-width: 1024px) {
+  nav {
+    background-color: #eeca69;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  }
+}
+
+/* Tablet & Desktop Styles */
+@media only screen and (min-width: 1024px) {
+
+  nav {
+    background-color: #4056A1;
+  }
 
   header.profile {
     height: 100%;
@@ -60,16 +72,15 @@ body {
   }
 
   .user-profile {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 85%;
-    height: 50%;
+    justify-content: space-around;
+    margin: auto;
+    width: 80%;
+    height: 45%;
     padding-top: 5%;
     background-color: #eeca69;
     background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
-    margin-top: -200px;
+    margin-top: 150px;
   }
 
   .container {

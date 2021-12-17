@@ -1,9 +1,14 @@
 header {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
   color: #FFFFFF;
   background-color: #eeca69;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+}
+
+.user-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
