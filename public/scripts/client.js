@@ -1,39 +1,48 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
+// 
+// Client-side JS logic
+//
 
 $(document).ready(function() {
   
-  $('.error').hide(); // hide error msg
+  $('.error').hide(); // hide error messages
 
-  $('.new').on('click', function() {
+  $('.new').on('click', function() { // form toggle stretch
     $('form').slideToggle();
     $('#tweet-text').focus();
-  }) 
+  }); 
 
-  const renderTweets = function(tweets) {
+  $(document).scroll(function() { // second toggle stretch
+    $('#toggle-up').show();
+  });
+
+  $('#toggle-up').on('click', function() { 
+    window.scrollTo(0,0);
+    $('#tweet-text').focus();
+  }); 
+
+  const renderTweets = function(tweets) { // render all tweets
+
     $('#tweets-container').empty(); // empty container
-    const sortedTweets = tweets.sort((a, b) => { // sort tweets by date
+    
+    const sortedTweets = tweets.sort((a, b) => { // sort tweets from most to least recent
       if (a.created_at > b.created_at) {
         return -1;
       } else {
         return 1;
       }
-    })
-    for (const tweet of tweets) {
+    });
+
+    for (const tweet of sortedTweets) {
       const $tweet = createTweetElement(tweet);
-      $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+      $('#tweets-container').append($tweet);
     }
   };  
 
-  const createTweetElement = (tweet) => {
+  const createTweetElement = (tweet) => { // create single tweet article
+
     const time = timeago.format(tweet.created_at);
 
-    // prevent XSS with escaping
-    const escape = function (str) { 
+    const escape = function (str) { // prevent XSS with escaping
       let div = document.createElement("div");
       div.appendChild(document.createTextNode(str));
       return div.innerHTML;
@@ -54,11 +63,9 @@ $(document).ready(function() {
           </div>
         </div>
       </header>
-
       <div class="tweet-body">
         <p>${escape(tweet.content.text)}</p>
       </div>
-
       <footer>
         <p>${time}</p>
         <div class="tweet-icons">
@@ -71,11 +78,11 @@ $(document).ready(function() {
 
   // Form Submission using jQuery
   
-  $('form').submit(function(event) { // event listener for submit event on the form element
+  $('form').submit(function(event) { // listen for submit event on the form element
     event.preventDefault();
 
-    const input = $(this).children('#tweet-text').val(); // count new tweet chars
-    const tweetCount = $(this.counter).val(); // count remaining chars
+    const input = $(this).children('#tweet-text').val(); // get the # of chars in new tweet
+    const tweetCount = $(this.counter).val(); // get the remaining chars
 
     if (input === "") {
       $('#too-long').hide();
@@ -88,7 +95,7 @@ $(document).ready(function() {
     } else {
       $('.error').slideUp();
 
-      const newTweet = $(this).serialize(); 
+      const newTweet = $(this).serialize(); // happy path, send ajax request to /tweets/
       $.ajax({
         url: "/tweets/",
         method: 'POST',
@@ -97,10 +104,9 @@ $(document).ready(function() {
           $('#tweet-text').val(''); // clear form after submission
           loadTweets();
         }
-      })
+      });
 
-      $(this.counter).val(140); // reset char counter value
-
+      $(this.counter).val(140); // reset counter
     }
   });
 
@@ -121,4 +127,4 @@ $(document).ready(function() {
 
   loadTweets();
 
-})
+});
