@@ -27,11 +27,16 @@
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
     
   </head>
-  <body>
+  <body class="light">
 
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
+      <div class="toggle">
+        <span>Night Mode</span>
+        <i class="fas fa-toggle-off" id="toggle_dark"></i>
+        <i class="fas fa-toggle-on hide" id="toggle_dark"></i>
+      </div>
       <div class="new">
         <line><b>Write</b> a new tweet</line><i class="fas fa-angle-double-down" id="arrow"></i>
       </div>
@@ -39,12 +44,14 @@
     
     <!-- Page-specific (main) content here -->
     <header class="profile">
-      <div class="user-profile">
-        <div>
-            <img src="/images/profile-hex.png"> 
-        </div>
-        <div>
-            <h2>Lucy <span class="not-bold">Shen</span></h2>
+      <div class="profile-box">
+        <div class="user-profile">
+          <div>
+              <img class="profile-pic" src="/images/profile-hex.png"> 
+          </div>
+          <div>
+              <h2>Lucy <span class="not-bold">Shen</span></h2>
+          </div>
         </div>
       </div>
     </header>

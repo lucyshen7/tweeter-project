@@ -6,7 +6,6 @@
 html {
   box-sizing: border-box;
 }
-
 *,
 *:before,
 *:after {
@@ -16,6 +15,7 @@ html {
 /*
  * Global layout stuff
  */
+
 body {
   color: #545149;
   font-size: 24px;
@@ -26,34 +26,39 @@ body {
 /*
  * Additional CSS
  */
+
 .light {
   background-color: beige;
 }
 
 .dark {
+  // dark mode stretch
   background-color: #3e487a;
-}
-.dark * {
-  color: white;
-}
-.dark .article {
-  border-color: white;
-  color: white;
-  box-shadow: none;
-}
-.dark .display-pic {
-  background-color: white;
-  border-radius: 30px 30px 30px 30px;
-}
-.dark .tweet-body {
-  padding-left: 1em;
-  padding-bottom: 0.5em;
-  font-size: 26px;
-  font-weight: 600;
-  color: white;
-  width: 97%;
-  margin: auto;
-  border-bottom: 4px solid white;
+  * {
+    color: white;
+  }
+
+  .article {
+    border-color: white;
+    color: white;
+    box-shadow: none;
+  }
+
+  .display-pic {
+    background-color: white;
+    border-radius: 30px 30px 30px 30px; 
+  }
+
+  .tweet-body {
+    padding-left: 1em;
+    padding-bottom: 0.5em;
+    font-size: 26px;
+    font-weight: 600;
+    color: white;
+    width: 97%;
+    margin: auto;
+    border-bottom: 4px solid white;
+  }
 }
 
 .not-bold {
@@ -77,6 +82,7 @@ body {
 /*
 * Mobile Styles
 */
+
 @media only screen and (max-width: 1024px) {
   .user-profile {
     display: flex;
@@ -96,9 +102,11 @@ body {
     margin-top: 60px;
   }
 }
+
 /*
 * Tablet & Desktop Styles
 */
+
 @media only screen and (min-width: 1024px) {
   nav {
     background-color: #4056a1;
@@ -135,5 +143,3 @@ body {
     float: right;
   }
 }
-
-/*# sourceMappingURL=layout.css.map */
