@@ -22,13 +22,18 @@ $(document).ready(function() {
     }
   });
 
-  $(document).scroll(function() { // second toggle stretch
+  $(document).on('scroll', function() { // second toggle stretch
     $('#toggle-up').show();
+    $('.new').hide();
   });
 
   $('#toggle-up').on('click', function() { 
-    window.scrollTo(0,0);
-    $('#tweet-text').focus();
+    $("html").animate({ scrollTop: 0 }, "slow", function() {
+      $(".new").show(); // doesn't always fire
+      $("#toggle-up").hide();
+    });
+    
+    $("#tweet-text").focus();
   }); 
 
 });

@@ -11,6 +11,20 @@ $(document).ready(function() {
     $('#tweet-text').focus();
   }); 
 
+  $('.fa-toggle-off').on('click', () => { // toggle on night mode
+    $('.fa-toggle-off').addClass('hide');
+    $('.fa-toggle-on').removeClass('hide');
+    $('body').addClass('dark');
+    $('body').removeClass('light');
+  })
+
+  $('.fa-toggle-on').on('click', () => { // toggle off night mode
+    $('.fa-toggle-on').addClass('hide');
+    $('.fa-toggle-off').removeClass('hide');
+    $('body').addClass('light');
+    $('body').removeClass('dark');
+  })
+
   const renderTweets = function(tweets) { // render all tweets
 
     $('#tweets-container').empty(); // empty container
