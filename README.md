@@ -2,19 +2,22 @@
 
 ## Welcome to my third project, **Tweeter!** 🐦
 
-Tweeter is a simple, single-page **Twitter clone** built with HTML, CSS, JS, jQuery and AJAX (front-end) + Node and Express (back-end).
+Tweeter is a simple, single-page **Twitter clone** built with HTML, CSS, JavaScript, jQuery and AJAX (front-end) + Node and Express (back-end).
 
 **Tweeter supports:**
+- Night mode toggle
 - Mobile and tablet display
 - Desktop display
 - Form toggle features
 
 ## Final Product
-!["Screenshot of desktop display with tweets"](https://github.com/lucyshen7/tweeter-project/blob/master/docs/desktop-tweets.png)
+!["Screenshot of desktop display with tweets"](/docs/desktop-tweets.png)
 
-!["Screenshot of mobile display with long tweet error msg"](https://github.com/lucyshen7/tweeter-project/blob/master/docs/mobile-display-error.png)
+!["Screenshot of night mode"](/docs/night-mode.png)
 
-!["Screenshot of empty tweet error msg"](https://github.com/lucyshen7/tweeter-project/blob/master/docs/empty-tweet-error.png)
+!["Screenshot of mobile display with long tweet error msg"](/docs/mobile-display-error.png)
+
+!["Screenshot of empty tweet error msg"](/docs/empty-tweet-error.png)
 
 ## Getting Started
 

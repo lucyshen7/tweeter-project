@@ -36,11 +36,11 @@ body {
   background-color: #3e487a;
   * {
     color: white;
+    text-shadow: 4px 4px rgb(138, 137, 137);
   }
 
   .article {
     border-color: white;
-    color: white;
     box-shadow: none;
   }
 
@@ -50,14 +50,12 @@ body {
   }
 
   .tweet-body {
-    padding-left: 1em;
-    padding-bottom: 0.5em;
-    font-size: 26px;
-    font-weight: 600;
     color: white;
-    width: 97%;
-    margin: auto;
     border-bottom: 4px solid white;
+  }
+
+  .submit {
+    border-top: 4px solid white;
   }
 }
 
